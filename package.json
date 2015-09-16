@@ -1,0 +1,39 @@
+{
+  "name": "styleuider",
+  "version": "0.1.0",
+  "description": "Generate style guides based on CSS, Sass, or Scss files",
+  "author": {
+    "name": "Tom Brremer",
+    "email": "tom@tbremer.com"
+  },
+  "contributors": [],
+  "bin": {
+    "styleguide": "bin/app.js"
+  },
+  "scripts": {},
+  "main": "index.js",
+  "repository": {
+    "tyupe": "git",
+    "url": "https://github.com/tbremer/styleguider"
+  },
+  "bugs": {
+    "url": "https://github.com/tbremer/styleguider/issues"
+  },
+  "keywords": [
+    "scss",
+    "styleguide",
+    "sass",
+    "css"
+  ],
+  "devDependencies": {
+    "gonzales-pe": "^2.0.2"
+  },
+  "dependencies": {
+    "babel-core": "^5.8.24",
+    "chalk": "^1.1.1",
+    "glob": "^5.0.14",
+    "markdown": "^0.5.0"
+  },
+  "preferGlobal": true,
+  "license": "MIT"
+}
