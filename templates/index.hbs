@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{options.name}} | {{title}}</title>
+    {{#each options.resource}}
+    {{this}}
+    {{/each}}
+</head>
+<body class="styleguide">
+    <header>
+        {{options.name}}
+    </header>
+    <nav class="navigation">
+        {{#each pages}}
+            <a href="{{this}}.html">{{this}}</a>
+        {{/each}}
+    </nav>
+
+    <article>
+        {{{parsedHTML}}}
+    </article>
+</body>
+</html>
