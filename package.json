@@ -28,6 +28,7 @@
   "dependencies": {
     "babel-core": "^5.8.24",
     "chalk": "^1.1.1",
+    "concat": "^1.0.0",
     "fs-extra": "^0.24.0",
     "glob": "^5.0.14",
     "gonzales-pe": "^2.0.2",
