@@ -1,5 +1,5 @@
 {
-  "name": "styleuider",
+  "name": "live-guide",
   "version": "0.2.0",
   "description": "Generate style guides based on CSS, Sass, or Scss files",
   "author": {
