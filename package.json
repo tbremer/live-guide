@@ -8,7 +8,7 @@
   },
   "contributors": [],
   "bin": {
-    "styleguide": "bin/app.js"
+    "live-guide": "bin/app.js"
   },
   "scripts": {},
   "main": "index.js",
