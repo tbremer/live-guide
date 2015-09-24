@@ -1,6 +1,6 @@
 {
   "name": "styleuider",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Generate style guides based on CSS, Sass, or Scss files",
   "author": {
     "name": "Tom Brremer",
