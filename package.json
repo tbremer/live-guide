@@ -40,8 +40,5 @@
     "yargs": "^3.25.0"
   },
   "preferGlobal": true,
-  "license": "MIT",
-  "devDependencies": {
-    "concat": "^1.0.0"
-  }
+  "license": "MIT"
 }
