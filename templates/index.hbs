@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>{{options.name}} | {{title}}</title>
-    {{#each options.resource}}
-    {{this}}
-    {{/each}}
+    <link rel="stylesheet" href="assets/app.css">
+    <script src="assets/app.js"></script>
 </head>
 <body class="styleguide">
     <header>
         {{options.name}}
+        Search is going to go here...
     </header>
     <nav class="navigation">
-        {{#each pages}}
-            <a href="{{this}}.html">{{this}}</a>
+        {{#each options.navigation}}
+            <a href="{{this}}">{{@key}}</a>
         {{/each}}
     </nav>
 
