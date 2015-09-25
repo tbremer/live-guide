@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{> resources}}
+</head>
+<body>
+    {{{snippet}}}
+
+    <script>
+        (function() {
+            var message = {
+                    id: '{{id}}',
+                    height: 0,
+                    width: 0
+                };
+            [].concat.apply([], document.body.children).forEach(function(el) {
+                if (el.offsetWidth > message.width) { message.width = el.offsetWidth; }
+                if (el.offsetHeight > message.height) { message.height = el.offsetHeight; }
+            });
+            window.parent.postMessage(message, '*');
+        })();
+    </script>
+</body>
+</html>
