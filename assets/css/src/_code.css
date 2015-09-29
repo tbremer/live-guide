@@ -1,0 +1,30 @@
+.code-block {
+    margin-bottom: 10px;
+}
+
+.code-block iframe,
+.code-block code {
+    display: block;
+    width: 49%;
+    float: left;
+}
+
+.code-block iframe {
+    border: none;
+}
+
+.code-block code {
+    display: block;
+    margin-left: 10px;
+    padding: .5rem;
+    background-color: color(var(--black) whiteness(52%));
+}
+
+code {
+    display: inline-block;
+    background-color: var(--primary-dk);
+    white-space: pre;
+    font-family: 'Inconsolata', 'Courier New', monospace;
+    padding: .1rem .15rem;
+    overflow: auto;
+}

@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Inconsolata);
+
+:root {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ *
+ * MICRO CLEARFIX
+ * author: nicolas gallagher
+ * url: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ */
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.styleguide {
+  position: relative;
+  padding-top: 60px;
+  padding-left: 160px;
+  z-index: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(186, 186, 186);
+  z-index: 10;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  width: 150px;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: rgb(186, 186, 186);
+  z-index: 9;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #131313;
+  text-decoration: none;
+  line-height: 30px;
+}
+
+nav a + a {
+  margin-top: 10px;
+}
+
+nav a:hover {
+  color: rgb(35, 123, 114);
+  text-decoration: underline;
+}
+
+.code-block {
+  margin-bottom: 10px;
+}
+
+.code-block iframe,
+.code-block code {
+  display: block;
+  width: 49%;
+  float: left;
+}
+
+.code-block iframe {
+  border: none;
+}
+
+.code-block code {
+  display: block;
+  margin-left: 10px;
+  padding: .5rem;
+  background-color: rgb(91, 91, 91);
+}
+
+code {
+  display: inline-block;
+  background-color: rgb(186, 186, 186);
+  white-space: pre;
+  font-family: 'Inconsolata', 'Courier New', monospace;
+  padding: .1rem .15rem;
+  overflow: auto;
+}
+
+html,
+body {
+  background-color: #efefef;
+}

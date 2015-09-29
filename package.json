@@ -10,7 +10,13 @@
   "bin": {
     "live-guide": "bin/app.js"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "npm run build:css",
+    "watch": "npm run watch:css",
+
+    "build:css": "myth assets/css/src/style.css assets/css/dist/app.css",
+    "watch:css": "watch 'npm run build' ./assets/css/src/"
+  },
   "main": "index.js",
   "repository": {
     "tyupe": "git",
@@ -39,5 +45,9 @@
     "yargs": "^3.25.0"
   },
   "preferGlobal": true,
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "myth": "^1.5.0",
+    "watch": "^0.16.0"
+  }
 }

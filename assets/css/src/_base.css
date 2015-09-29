@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/**
+ *
+ * MICRO CLEARFIX
+ * author: nicolas gallagher
+ * url: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+

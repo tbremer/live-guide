@@ -1,0 +1,11 @@
+:root {
+    --primary: #efefef;
+    --primary-dk: color(var(--primary) shade(22%));
+    --primary-dkst: color(var(--primary) shade(45%));
+
+    --accent: #40e0d0;
+    --accent-dk: color(var(--accent) shade(22%));
+    --accent-dkst: color(var(--accent) shade(45%));
+
+    --black: #131313;
+}
