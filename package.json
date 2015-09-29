@@ -1,6 +1,6 @@
 {
   "name": "live-guide",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Generate style guides based on CSS, Sass, or Scss files",
   "author": {
     "name": "Tom Brremer",
