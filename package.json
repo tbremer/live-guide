@@ -1,6 +1,6 @@
 {
   "name": "live-guide",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Generate style guides based on CSS, Sass, or Scss files",
   "author": {
     "name": "Tom Brremer",
@@ -13,7 +13,6 @@
   "scripts": {
     "build": "npm run build:css",
     "watch": "npm run watch:css",
-
     "build:css": "myth assets/css/src/style.css assets/css/dist/app.css",
     "watch:css": "watch 'npm run build' ./assets/css/src/"
   },
