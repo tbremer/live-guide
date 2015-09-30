@@ -17,7 +17,7 @@
     display: block;
     margin-left: 10px;
     padding: .5rem;
-    background-color: color(var(--black) whiteness(52%));
+    background-color: color(var(--black) whiteness(60%));
 }
 
 code {

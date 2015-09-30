@@ -1,7 +1,7 @@
 .styleguide {
     position: relative;
     padding-top: 60px;
-    padding-left: 160px;
+    padding-left: 210px;
     z-index: 0;
 }
 
@@ -20,7 +20,7 @@ nav {
     top: 0;
     left: 0;
     padding-top: 50px;
-    width: 150px;
+    width: 200px;
     height: 100%;
     overflow: hidden;
     overflow-y: auto;
@@ -44,4 +44,8 @@ nav a + a {
 nav a:hover {
     color: var(--accent-dkst);
     text-decoration: underline;
+}
+
+article > h1 {
+    margin-top: 0;
 }
