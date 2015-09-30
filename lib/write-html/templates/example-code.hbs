@@ -8,18 +8,17 @@
     {{{snippet}}}
 
     <script>
-        (function() {
+        document.addEventListener('DOMContentLoaded', function() {
             var message = {
                     id: '{{id}}',
-                    height: 0,
+                    height: document.body.clientHeight,
                     width: 0
                 };
             [].concat.apply([], document.body.children).forEach(function(el) {
                 if (el.offsetWidth > message.width) { message.width = el.offsetWidth; }
-                if (el.offsetHeight > message.height) { message.height = el.offsetHeight; }
             });
             window.parent.postMessage(message, '*');
-        })();
+        });
     </script>
 </body>
 </html>

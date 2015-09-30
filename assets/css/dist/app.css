@@ -106,6 +106,7 @@ article > h1 {
 
 code {
   display: inline-block;
+  vertical-align: middle;
   background-color: rgb(186, 186, 186);
   white-space: pre;
   font-family: 'Inconsolata', 'Courier New', monospace;

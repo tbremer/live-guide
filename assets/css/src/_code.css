@@ -22,6 +22,7 @@
 
 code {
     display: inline-block;
+    vertical-align: middle;
     background-color: var(--primary-dk);
     white-space: pre;
     font-family: 'Inconsolata', 'Courier New', monospace;

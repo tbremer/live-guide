@@ -4,6 +4,6 @@
     if (!element) { return false; }
 
     //element.style.width = event.data.width + 'px';
-    //element.style.height = event.data.height + 'px';
+    element.style.height = event.data.height + 'px';
   }, false)
 })();
