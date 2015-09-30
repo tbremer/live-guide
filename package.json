@@ -1,6 +1,6 @@
 {
   "name": "live-guide",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Generate style guides based on commented style sheets.",
   "author": {
     "name": "Tom Brremer",
