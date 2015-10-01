@@ -62,6 +62,10 @@ a {
   border-bottom: 1px solid transparent;
 }
 
+a + a {
+  margin-top: 1vw;
+}
+
 a:hover {
   border-bottom: 1px solid rgb(186, 186, 186);
 }
