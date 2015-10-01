@@ -5,6 +5,12 @@
   font-weight: 400;
 }
 
+/**
+ * @title Core
+ * @description These features are throughout the source code and can be plugged in on any element.
+ * @writeName index
+*/
+
 *,
 *::before,
 *::after {
@@ -13,10 +19,16 @@
 
 /**
  *
- * MICRO CLEARFIX
- * author: nicolas gallagher
- * url: http://nicolasgallagher.com/micro-clearfix-hack/
+ * ### MICRO CLEARFIX
+ * @author [nicolas gallagher](http://nicolasgallagher.com)
+ * @url http://nicolasgallagher.com/micro-clearfix-hack/
  *
+ * Apply a class of `cf` to any element that has floated elements inside of it.
+ * @example html
+ * <section class="cf">
+ *  <section style="float: left; width: 25%;">I am floating left</section>
+ *  <section style="float: left; width: 74%;">I am also floating left so the parent section will not have any height.<section>
+ * </section>
  */
 
 .cf:before,
@@ -27,6 +39,27 @@
 
 .cf:after {
   clear: both;
+}
+
+/**
+ *
+ * ### Links
+ * Link do not need any special class names to match stylistically, however they should follow some convetions
+ * - links should direct users through the page
+ * - links should direct pages to outside pages or pages of content within the site structure
+ * - links **should not** be used to trigger user actions such as modals.
+ *
+ * @example html
+ * <a href="#">I am a link</a>
+ */
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid rgb(186, 186, 186);
 }
 
 .styleguide {
@@ -89,7 +122,7 @@ nav a + a {
 }
 
 nav a:hover {
-  color: rgb(35, 123, 114);
+  color: rgb(29, 84, 120);
   text-decoration: underline;
 }
 

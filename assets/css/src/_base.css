@@ -12,9 +12,11 @@
 
 /**
  *
- * ## MICRO CLEARFIX
- * @author nicolas gallagher
+ * ### MICRO CLEARFIX
+ * @author [nicolas gallagher](http://nicolasgallagher.com)
  * @url http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * Apply a class of `cf` to any element that has floated elements inside of it.
  * @example html
  * <section class="cf">
  *  <section style="float: left; width: 25%;">I am floating left</section>
@@ -32,3 +34,22 @@
     clear: both;
 }
 
+/**
+ *
+ * ### Links
+ * Link do not need any special class names to match stylistically, however they should follow some convetions
+ * - links should direct users through the page
+ * - links should direct pages to outside pages or pages of content within the site structure
+ * - links **should not** be used to trigger user actions such as modals.
+ *
+ * @example html
+ * <a href="#">I am a link</a>
+ */
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid var(--primary-dk);
+}
