@@ -46,8 +46,12 @@
  * <a href="#">I am a link</a>
  */
 a {
+    display: inline-block;
     color: var(--accent);
     text-decoration: none;
+    vertical-align: middle;
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
 }
 
 a:hover {

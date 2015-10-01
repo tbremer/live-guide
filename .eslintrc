@@ -1,0 +1,39 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": false,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": false,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "spread": true,
+    "superInFunctions": true,
+    "templateStrings": true,
+    "no-var": true,
+    "prefer-const": true
+  },
+  "globals": {
+    "$": true,
+    "collector": true,
+    "expect": true
+  },
+  "rules": {
+    "comma-spacing": [2],
+    "eqeqeq": [2, "smart"],
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multi-spaces": 2,
+    "no-underscore-dangle": 0,
+    "quotes": [2, "single", "avoid-escape"]
+  }
+}

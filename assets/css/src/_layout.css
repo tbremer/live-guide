@@ -11,8 +11,8 @@ header {
     left: 0;
     width: 100%;
     height: 50px;
-    padding-left: 205px;
-    background-color: var(--primary-dk);
+    padding: 0 1.5vw;
+    background-color: var(--accent);
     z-index: 10;
 }
 
@@ -23,37 +23,21 @@ header h1 {
     transform: translateY(-50%);
     text-transform: lowercase;
     font-variant: small-caps;
+    color: var(--primary);
 }
 
 nav {
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 50px;
+    padding-top: calc(50px + 1.5vw);
     width: 200px;
     height: 100%;
     overflow: hidden;
     overflow-y: auto;
-    background-color: var(--primary-dk);
     z-index: 9;
-}
-
-nav a {
-    display: block;
     text-align: center;
-    font-weight: 700;
     text-transform: uppercase;
-    color: var(--black);
-    text-decoration: none;
-    line-height: 30px;
-}
-nav a + a {
-    margin-top: 10px;
-}
-
-nav a:hover {
-    color: var(--accent-dkst);
-    text-decoration: underline;
 }
 
 article > h1 {

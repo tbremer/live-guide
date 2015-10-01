@@ -54,8 +54,12 @@
  */
 
 a {
+  display: inline-block;
   color: #3498db;
   text-decoration: none;
+  vertical-align: middle;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
 }
 
 a:hover {
@@ -75,8 +79,8 @@ header {
   left: 0;
   width: 100%;
   height: 50px;
-  padding-left: 205px;
-  background-color: rgb(186, 186, 186);
+  padding: 0 1.5vw;
+  background-color: #3498db;
   z-index: 10;
 }
 
@@ -92,38 +96,21 @@ header h1 {
   -moz-font-feature-settings: "c2sc";
   font-feature-settings: "c2sc";
   font-variant: small-caps;
+  color: #efefef;
 }
 
 nav {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 50px;
+  padding-top: calc(50px + 1.5vw);
   width: 200px;
   height: 100%;
   overflow: hidden;
   overflow-y: auto;
-  background-color: rgb(186, 186, 186);
   z-index: 9;
-}
-
-nav a {
-  display: block;
   text-align: center;
-  font-weight: 700;
   text-transform: uppercase;
-  color: #131313;
-  text-decoration: none;
-  line-height: 30px;
-}
-
-nav a + a {
-  margin-top: 10px;
-}
-
-nav a:hover {
-  color: rgb(29, 84, 120);
-  text-decoration: underline;
 }
 
 article > h1 {
