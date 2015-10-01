@@ -11,13 +11,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             var message = {
                     id: '{{id}}',
-                    height: document.body.clientHeight,
+                    height: document.querySelector('html').scrollHeight,
                     width: 0
                 };
             [].concat.apply([], document.body.children).forEach(function(el) {
-                if (el.offsetWidth > message.width) { message.width = el.offsetWidth; }
+                var max = Math.max(el.scrollWidth, el.offsetWidth, el.clientWidth);
+                if (max > message.width) { message.width = max; }
             });
             window.parent.postMessage(message, '*');
+            document.body.style.overflow = 'hidden';
         });
     </script>
 </body>

@@ -1,3 +1,9 @@
+/**
+ * @title Core
+ * @description These features are throughout the source code and can be plugged in on any element.
+ * @writeName index
+*/
+
 *,
 *::before,
 *::after {
@@ -6,10 +12,14 @@
 
 /**
  *
- * MICRO CLEARFIX
- * author: nicolas gallagher
- * url: http://nicolasgallagher.com/micro-clearfix-hack/
- *
+ * ## MICRO CLEARFIX
+ * @author nicolas gallagher
+ * @url http://nicolasgallagher.com/micro-clearfix-hack/
+ * @example html
+ * <section class="cf">
+ *  <section style="float: left; width: 25%;">I am floating left</section>
+ *  <section style="float: left; width: 74%;">I am also floating left so the parent section will not have any height.<section>
+ * </section>
  */
 
 .cf:before,

@@ -8,6 +8,8 @@ var cliOptions = require('yargs')
   .describe('output', 'Where should the output styleguide go? Defaults to current working directory /styleguide')
   .alias('resource', 'r')
   .describe('resource', 'additional resources to be loaded into the code example iframes')
+  .alias('name', 'n')
+  .describe('name', 'name for the style guide or product')
   //.alias('c', 'config')
   //.alias('t', 'template')
   .alias('help', 'h')
@@ -20,7 +22,8 @@ var cliOptions = require('yargs')
 var options = {
   input: cliOptions.input,
   output: cliOptions.output || undefined,
-  resources: cliOptions.resource || []
+  resources: cliOptions.resource || [],
+  name: cliOptions.name || 'Styleguide'
 }
 
 require('../index.js')(options);
