@@ -117,6 +117,10 @@ nav {
   text-transform: uppercase;
 }
 
+nav > div + div {
+  margin-top: 1vw;
+}
+
 article > h1 {
   margin-top: 0;
 }
