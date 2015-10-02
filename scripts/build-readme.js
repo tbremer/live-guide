@@ -7,15 +7,13 @@ const fs = require('fs'),
 
 const syntaxString = function(key, obj) {
   obj.description = obj.description ? `**Description:** ${obj.description}` : '';
-  obj.notes = obj.notes ? `*${obj.notes}*` : '';
+  obj.notes = obj.notes ? `*${obj.notes}*\n` : '';
   obj.example = obj.example ? `**Example:**\n\`\`\`\n${obj.example.join('\n\n')}\n\`\`\`` : '';
 
   let retStr = `
 #### @${key}
 ${obj.description}
-
 ${obj.notes}
-
 ${obj.example}
 `;
 

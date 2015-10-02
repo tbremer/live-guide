@@ -23,6 +23,20 @@ Use in command line:
 $ npm install --global live-guide
 $ live-guide --input="path/to/**/*.css" --output=/var/www/styleguide --resource path/to/style.css another/path/here.js
 ```
+
+## Command Line API
+```shell
+Options:
+  --input, -i     file(s) (glob pattern) that should be evaulated and built into
+                  the Styleguide                                      [required]
+  --output, -o    Where should the output styleguide go? Defaults to current
+                  working directory /styleguide
+  --resource, -r  additional resources to be loaded into the code example
+                  iframes                                                [array]
+  --name, -n      name for the style guide or product
+  --help, -h      Show help                                            [boolean]
+```
+
 ## Module API
 
 #### @author
