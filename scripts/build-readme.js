@@ -8,6 +8,7 @@ const fs = require('fs'),
 const syntaxString = function(key, obj) {
   let retStr = `
 **@${key}**: ${obj.description}
+
 **pattern**: \`${obj.pattern}\`
 `;
 

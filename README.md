@@ -27,30 +27,37 @@ $ live-guide --input="path/to/**/*.css" --output=/var/www/styleguide --resource 
 ## Module API
 
 **@author**: Contribute the code to someone
+
 **pattern**: `/@author[^\S\n]+?(.+)/g`
 
 
 **@description**: Set a description for this section of the styleguide, generally used after an `@title`
+
 **pattern**: `/@description[^\S\n]+?(.+)/g`
 
 
 **@example**: A code example, similar to writing ``` in Markdown
+
 **pattern**: `/^@example(.*?)?$\s((?:^.+$\s?)+)/gm`
 
 
 **@title**: The title of the component, module or API you are developing
+
 **pattern**: `/^@title (.*)$/gm`
 
 
 **@todo**: Let users know what needs to be done in this section of your style guide
+
 **pattern**: `/^@(?:todo|task) (.*)$/gm`
 
 
 **@url**: Add a link to the styleguide, automatically opens in a new tab
+
 **pattern**: `/@url[^\S\n]+?(.+)/g`
 
 
 **@wrietName**: If you want the file name to be different than the title, for instance setting up an index page. *There is no need to provide a file extension*
+
 **pattern**: `/@writeName(.+)/g`
 
 
