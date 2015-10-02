@@ -23,47 +23,87 @@ Use in command line:
 $ npm install --global live-guide
 $ live-guide --input="path/to/**/*.css" --output=/var/www/styleguide --resource path/to/style.css another/path/here.js
 ```
-
 ## Module API
 
-**@author**: Contribute the code to someone
-
-**pattern**: `/@author[^\S\n]+?(.+)/g`
-
-
-**@description**: Set a description for this section of the styleguide, generally used after an `@title`
-
-**pattern**: `/@description[^\S\n]+?(.+)/g`
+#### @author
+**Description:** Contribute the code to someone
 
 
-**@example**: A code example, similar to writing ``` in Markdown
 
-**pattern**: `/^@example(.*?)?$\s((?:^.+$\s?)+)/gm`
+**Example:**
+```
+/* @example Jan Doe */
 
-
-**@title**: The title of the component, module or API you are developing
-
-**pattern**: `/^@title (.*)$/gm`
-
-
-**@todo**: Let users know what needs to be done in this section of your style guide
-
-**pattern**: `/^@(?:todo|task) (.*)$/gm`
+// @author Jon Doe
+```
 
 
-**@url**: Add a link to the styleguide, automatically opens in a new tab
-
-**pattern**: `/@url[^\S\n]+?(.+)/g`
-
-
-**@wrietName**: If you want the file name to be different than the title, for instance setting up an index page. *There is no need to provide a file extension*
-
-**pattern**: `/@writeName(.+)/g`
+#### @description
+**Description:** Set a description for this section of the styleguide, generally used after an `@title`
 
 
----
 
-## TODO
+**Example:**
+```
+/* @description This describes your component or module */
+
+//@description This describes your component or module
+```
+
+
+#### @example
+**Description:** A code example, similar to writing code blocks in Markdown
+
+*Any example written in a single line comments will need a blank comment line `//` after it.*
+
+**Example:**
+```
+//@example
+//<button class="btn">Click me, I do stuff!</button>//
+
+
+/*
+@example
+*<button class="btn">Click me, I do stuff!//</button>
+*/
+```
+
+
+#### @title
+**Description:** The title of the component, module or API you are developing
+
+
+
+
+
+
+#### @todo
+**Description:** Let users know what needs to be done in this section of your style guide
+
+
+
+
+
+
+#### @url
+**Description:** Add a link to the styleguide, automatically opens in a new tab
+
+
+
+
+
+
+#### @wrietName
+**Description:** If you want the file name to be different than the title, for instance setting up an index page. *There is no need to provide a file extension*
+
+
+
+
+## Todo
+
+
+
+
 - Log whats happening.
 - Internal Modules
     1. write-html
@@ -71,5 +111,3 @@ $ live-guide --input="path/to/**/*.css" --output=/var/www/styleguide --resource 
 - Handlebars
 	1. helpers
     	-  resource allow HTTP/S resources.
-
-

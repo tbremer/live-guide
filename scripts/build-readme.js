@@ -3,13 +3,20 @@
 const fs = require('fs'),
   path = require('path'),
   syntaxAPI = require(path.resolve(__dirname, '../lib/filter-array/lib/syntax')),
-  readmeRegex = /##(?:[\sa-z]+)api(.|\n)*?---/gi;
+  readmeRegex = /##(?:[\sa-z]+)api(.|\n)*## TODO/gi;
 
 const syntaxString = function(key, obj) {
-  let retStr = `
-**@${key}**: ${obj.description}
+  obj.description = obj.description ? `**Description:** ${obj.description}` : '';
+  obj.notes = obj.notes ? `*${obj.notes}*` : '';
+  obj.example = obj.example ? `**Example:**\n\`\`\`\n${obj.example.join('\n\n')}\n\`\`\`` : '';
 
-**pattern**: \`${obj.pattern}\`
+  let retStr = `
+#### @${key}
+${obj.description}
+
+${obj.notes}
+
+${obj.example}
 `;
 
   return retStr;
@@ -22,6 +29,11 @@ let apiString = syntaxKeys.map((k) => {
   return syntaxString(k, syntaxAPI[k])
 }).join('\n');
 
-readme = readme.replace(readmeRegex, `## Module API\n${apiString}\n\n---`);
+readme = readme.replace(readmeRegex, function() {
+  const start = '## Module API\n',
+    end = '## Todo\n';
+
+  return `${start}${apiString}${end}`;
+});
 
 fs.writeFileSync(path.resolve(__dirname, '../README.md'), readme);
