@@ -11,9 +11,10 @@
     "live-guide": "bin/app.js"
   },
   "scripts": {
-    "build": "npm run build:css",
+    "build": "npm run build:css && npm run build:readme",
     "watch": "npm run watch:css",
     "build:css": "myth assets/css/src/style.css assets/css/dist/app.css",
+    "build:readme": "node scripts/build-readme.js",
     "watch:css": "watch 'npm run build' ./assets/css/src/"
   },
   "main": "index.js",
