@@ -64,14 +64,12 @@ $ live-guide --input="path/to/**/*.css" --output=/var/www/styleguide --resource 
 ---
 
 ## TODO
-[ ] Log whats happening.
-
-[ ] Internal Modules
+- Log whats happening.
+- Internal Modules
     1. write-html
             - use all async solutions
-
-[ ] Handlebars
-1. helpers
-    -  resource allow HTTP/S resources.
+- Handlebars
+	1. helpers
+    	-  resource allow HTTP/S resources.
 
 
