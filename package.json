@@ -20,10 +20,10 @@
   "main": "index.js",
   "repository": {
     "tyupe": "git",
-    "url": "https://github.com/tbremer/styleguider"
+    "url": "https://github.com/tbremer/live-guide"
   },
   "bugs": {
-    "url": "https://github.com/tbremer/styleguider/issues"
+    "url": "https://github.com/tbremer/live-guide/issues"
   },
   "keywords": [
     "scss",
