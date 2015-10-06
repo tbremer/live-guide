@@ -29,7 +29,7 @@ let apiString = syntaxKeys.map((k) => {
 
 readme = readme.replace(readmeRegex, function() {
   const start = '## Module API\n',
-    end = '## Todo\n';
+    end = '## Todo';
 
   return `${start}${apiString}${end}`;
 });

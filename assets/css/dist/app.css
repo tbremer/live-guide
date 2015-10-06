@@ -131,9 +131,9 @@ article > h1 {
 
 .code-block iframe,
 .code-block code {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   width: 49%;
-  float: left;
 }
 
 .code-block iframe {
@@ -141,7 +141,6 @@ article > h1 {
 }
 
 .code-block code {
-  display: block;
   margin-left: 10px;
   padding: .5rem;
   background-color: rgb(100, 100, 100);

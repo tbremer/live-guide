@@ -103,16 +103,6 @@ Options:
 
 
 ## Todo
-
-
-
-
-
-
-
-
-
-
 - Log whats happening.
 - Internal Modules
     1. write-html
