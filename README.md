@@ -26,27 +26,25 @@ $ live-guide --input="path/to/**/*.css" --output=/var/www/styleguide --resource 
 
 ## Command Line API
 ```shell
+styleguider --input **/*.css [options]
+
 Options:
-  --input, -i     file(s) (glob pattern) that should be evaulated and built into
-                  the Styleguide                                      [required]
-  --output, -o    Where should the output styleguide go? Defaults to current
-                  working directory /styleguide
-  --resource, -r  additional resources to be loaded into the code example
-                  iframes                                                [array]
+  --input, -i     file(s) (glob pattern) that should be evaulated and built into the Styleguide  [required]
+  --output, -o    Where should the output styleguide go? Defaults to current working directory /styleguide
+  --resource, -r  additional resources to be loaded into the code example iframes  [array]
   --name, -n      name for the style guide or product
-  --help, -h      Show help                                            [boolean]
+  --help, -h      Show help  [boolean]
+
 ```
 
 ## Module API
 
 #### @author
-**Description:** Contribute the code to someone
-
-
+**Description:** Contribute the code to someone.
 
 **Example:**
 ```
-/* @example Jan Doe */
+/* @author Jan Doe */
 
 // @author Jon Doe
 ```
@@ -54,8 +52,6 @@ Options:
 
 #### @description
 **Description:** Set a description for this section of the styleguide, generally used after an `@title`
-
-
 
 **Example:**
 ```
@@ -67,18 +63,18 @@ Options:
 
 #### @example
 **Description:** A code example, similar to writing code blocks in Markdown
-
 *Any example written in a single line comments will need a blank comment line `//` after it.*
 
 **Example:**
 ```
 //@example
-//<button class="btn">Click me, I do stuff!</button>//
+//<button class="btn">Click me, I do stuff!</button>
+//
 
 
 /*
 @example
-*<button class="btn">Click me, I do stuff!//</button>
+*<button class="btn">Click me, I do stuff!</button>
 */
 ```
 
@@ -89,12 +85,8 @@ Options:
 
 
 
-
-
 #### @todo
-**Description:** Let users know what needs to be done in this section of your style guide
-
-
+**Description:** Let users know what needs to be done in this section of your styleguide
 
 
 
@@ -105,15 +97,17 @@ Options:
 
 
 
-
-
 #### @wrietName
-**Description:** If you want the file name to be different than the title, for instance setting up an index page. *There is no need to provide a file extension*
-
-
+**Description:** If you want the file name to be different than the title, for instance setting up an index page.
+*There is no need to provide a file extension*
 
 
 ## Todo
+
+
+
+
+
 
 
 

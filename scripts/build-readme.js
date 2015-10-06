@@ -3,7 +3,7 @@
 const fs = require('fs'),
   path = require('path'),
   syntaxAPI = require(path.resolve(__dirname, '../lib/filter-array/lib/syntax')),
-  readmeRegex = /##(?:[\sa-z]+)api(.|\n)*## TODO/gi;
+  readmeRegex = /## module api(.|\n)*## TODO/gi;
 
 const syntaxString = function(key, obj) {
   obj.description = obj.description ? `**Description:** ${obj.description}` : '';

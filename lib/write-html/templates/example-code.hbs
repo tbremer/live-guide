@@ -8,18 +8,35 @@
     {{{snippet}}}
 
     <script>
+        function generateMessage() {
+            return {
+                id: '{{id}}',
+                height: document.querySelector('html').scrollHeight,
+            };
+        };
+
+        function updateiFrame() {
+            var curMessage = generateMessage();
+
+            if (!baseHeight) {
+                baseHeight = curMessage.height;
+                return window.parent.postMessage(curMessage, '*')
+            }
+
+            if (curMessage.height !== baseHeight) {
+                baseHeight = curMessage.height;
+                window.parent.postMessage(curMessage, '*');
+            }
+        };
+
+        var baseHeight;
+
         document.addEventListener('DOMContentLoaded', function() {
-            var message = {
-                    id: '{{id}}',
-                    height: document.querySelector('html').scrollHeight,
-                    width: 0
-                };
-            [].concat.apply([], document.body.children).forEach(function(el) {
-                var max = Math.max(el.scrollWidth, el.offsetWidth, el.clientWidth);
-                if (max > message.width) { message.width = max; }
-            });
-            window.parent.postMessage(message, '*');
-            document.body.style.overflow = 'hidden';
+            try {
+                window.getAnimationFrame(updateiFrame);
+            } catch (e) {
+                setInterval(updateiFrame, 50);
+            }
         });
     </script>
 </body>
