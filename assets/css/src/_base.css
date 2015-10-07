@@ -8,6 +8,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    color: var(--black);
 }
 
 /**
@@ -61,3 +62,34 @@ a + a {
 a:hover {
     border-bottom: 1px solid var(--primary-dk);
 }
+
+/**
+ *
+ * ### Buttons
+ * @todo research implication of removing outline for accessability.
+ */
+button {
+    outline: none;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: .3rem .7rem .35rem .45rem;
+}
+
+button:hover {
+    border: 1px solid var(--accent);
+}
+
+button:active {
+    border: 1px solid var(--accent-dk);
+}
+/**
+ * ### hidden / hide
+ * @description this hides an element usin an `!important` rule.
+ */
+.hidden,
+.hide {
+    display: none !important;
+}
+

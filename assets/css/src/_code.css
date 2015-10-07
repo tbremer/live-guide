@@ -4,17 +4,26 @@
 
 .code-block iframe,
 .code-block code {
-    display: inline-block;
-    vertical-align: top;
-    width: 49%;
+    display: block;
+    width: 100%;
 }
 
 .code-block iframe {
     border: none;
 }
 
+.code-block iframe.hidden ~ code {
+    margin-top: 0;
+}
+
+.code-block .btn { margin-top: 15px; }
+
+.code-block .btn .icon {
+    width: 1.5rem;
+}
+
 .code-block code {
-    margin-left: 10px;
+    margin-top: 15px;
     padding: .5rem;
     background-color: color(var(--black) whiteness(60%));
 }

@@ -1,7 +1,8 @@
 .styleguide {
     position: relative;
-    padding-top: 60px;
-    padding-left: 210px;
+    margin-top: 50px;
+    margin-left: 200px;
+    padding: 3vw;
     z-index: 0;
 }
 

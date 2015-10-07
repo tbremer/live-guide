@@ -15,6 +15,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  color: #131313;
 }
 
 /**
@@ -70,10 +71,47 @@ a:hover {
   border-bottom: 1px solid rgb(186, 186, 186);
 }
 
+/**
+ *
+ * ### Buttons
+ * @todo research implication of removing outline for accessability.
+ */
+
+button {
+  outline: none;
+  -webkit-font-feature-settings: "c2sc";
+  -moz-font-feature-settings: "c2sc";
+  font-feature-settings: "c2sc";
+  font-variant: small-caps;
+  text-transform: lowercase;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: .3rem .7rem .35rem .45rem;
+}
+
+button:hover {
+  border: 1px solid #3498db;
+}
+
+button:active {
+  border: 1px solid rgb(41, 119, 171);
+}
+
+/**
+ * ### hidden / hide
+ * @description this hides an element usin an `!important` rule.
+ */
+
+.hidden,
+.hide {
+  display: none !important;
+}
+
 .styleguide {
   position: relative;
-  padding-top: 60px;
-  padding-left: 210px;
+  margin-top: 50px;
+  margin-left: 200px;
+  padding: 3vw;
   z-index: 0;
 }
 
@@ -131,17 +169,28 @@ article > h1 {
 
 .code-block iframe,
 .code-block code {
-  display: inline-block;
-  vertical-align: top;
-  width: 49%;
+  display: block;
+  width: 100%;
 }
 
 .code-block iframe {
   border: none;
 }
 
+.code-block iframe.hidden ~ code {
+  margin-top: 0;
+}
+
+.code-block .btn {
+  margin-top: 15px;
+}
+
+.code-block .btn .icon {
+  width: 1.5rem;
+}
+
 .code-block code {
-  margin-left: 10px;
+  margin-top: 15px;
   padding: .5rem;
   background-color: rgb(100, 100, 100);
 }
@@ -154,6 +203,56 @@ code {
   font-family: 'Inconsolata', 'Courier New', monospace;
   padding: .1rem .15rem;
   overflow: auto;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.eye {
+  /** base eye class **/
+}
+
+.eye:hover {
+  cursor: pointer;
+}
+
+.eye:hover .inner-eye {
+  stroke-width: .75;
+  stroke: rgb(186, 186, 186);
+  fill: rgb(131, 131, 131);
+}
+
+.eye:active .inner-eye {
+  stroke-width: .55;
+  stroke: #3498db;
+  fill: #3498db;
+  -webkit-transform: scale(0.925);
+  -ms-transform: scale(0.925);
+  transform: scale(0.925);
+}
+
+.eye .inner-eye {
+  fill: va(--primary-dk);
+  stroke-width: 0;
+  -webkit-transition: fill 150ms linear, stroke-width 150ms ease-out;
+  transition: fill 150ms linear, stroke-width 150ms ease-out;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.eye .outer-eye {
+  fill: #efefef;
+  stroke: rgb(186, 186, 186);
+}
+
+.eye .lid-shape {
+  fill: rgb(186, 186, 186);
 }
 
 html,
