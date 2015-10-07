@@ -9,33 +9,48 @@
 
     <script>
         function generateMessage() {
+            var children = [].concat.apply([], document.body.children);
+            var height = document.querySelector('html').scrollHeight;
+
+            children.forEach(function(node) {
+                var _height = node.scrollHeight;
+                if (_height > height) { height = _height; }
+            });
+
             return {
                 id: '{{id}}',
-                height: document.querySelector('html').scrollHeight,
+                height: height,
             };
         };
 
         function updateiFrame() {
             var curMessage = generateMessage();
 
+            if (baseHeight === 0) {
+                console.log('canceling_');
+                return window.cancelAnimationFrame(animationID) || clearInterval(animationID);
+            }
+
             if (!baseHeight) {
                 baseHeight = curMessage.height;
-                return window.parent.postMessage(curMessage, '*')
+                window.parent.postMessage(curMessage, '*')
             }
 
             if (curMessage.height !== baseHeight) {
                 baseHeight = curMessage.height;
                 window.parent.postMessage(curMessage, '*');
             }
+
+            window.requestAnimationFrame(updateiFrame);
         };
 
-        var baseHeight;
+        var baseHeight, animationID;
 
         document.addEventListener('DOMContentLoaded', function() {
             try {
-                window.getAnimationFrame(updateiFrame);
-            } catch (e) {
-                setInterval(updateiFrame, 50);
+                animationID = window.requestAnimationFrame(updateiFrame)
+            } catch(e) {
+                animationID = setInterval(updateiFrame, 50);
             }
         });
     </script>
