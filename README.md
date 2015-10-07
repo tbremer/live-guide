@@ -79,6 +79,12 @@ Options:
 ```
 
 
+#### @skip
+**Description:** Allows line to be skipped on output
+
+
+
+
 #### @title
 **Description:** The title of the component, module or API you are developing
 
