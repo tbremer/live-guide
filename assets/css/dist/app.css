@@ -111,7 +111,7 @@ button:active {
   position: relative;
   margin-top: 50px;
   margin-left: 200px;
-  padding: 3vw;
+  padding: 10px;
   z-index: 0;
 }
 
