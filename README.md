@@ -63,7 +63,9 @@ Options:
 
 #### @example
 **Description:** A code example, similar to writing code blocks in Markdown
-*Any example written in a single line comments will need a blank comment line `//` after it.*
+*Any example will need a blank comment line after it.
+You can add blank lines in examples with `
+`.*
 
 **Example:**
 ```
