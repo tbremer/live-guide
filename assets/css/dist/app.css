@@ -84,7 +84,8 @@ button {
   font-feature-settings: "c2sc";
   font-variant: small-caps;
   text-transform: lowercase;
-  border: 1px solid transparent;
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 2px;
   background-color: transparent;
   padding: .3rem .7rem .35rem .45rem;
 }

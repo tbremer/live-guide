@@ -72,7 +72,8 @@ button {
     outline: none;
     font-variant: small-caps;
     text-transform: lowercase;
-    border: 1px solid transparent;
+    border: 1px solid var(--primary-dk);
+    border-radius: 2px;
     background-color: transparent;
     padding: .3rem .7rem .35rem .45rem;
 }
