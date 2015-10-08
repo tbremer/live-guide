@@ -92,6 +92,17 @@ styleguide(options)
 
 ---
 
+##### Syntax
+**type:** `Module`
+
+**description** Additional syntax parsers that will be merged with the default syntaxes. This preforms a `deepmerge` so you can override existing functionality.
+
+**required:** false
+
+**default:** `{}`
+
+---
+
 ## Use in command line:
 ```shell
 $ npm install --global live-guide
@@ -107,6 +118,7 @@ Options:
   --output, -o    Where should the output styleguide go? Defaults to current working directory /styleguide
   --resource, -r  additional resources to be loaded into the code example iframes  [array]
   --name, -n      name for the style guide or product
+  --syntax, -s    add or override syntax filters to our main parser, this preforms a deepmerge
   --help, -h      Show help  [boolean]
 
 ```

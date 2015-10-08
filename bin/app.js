@@ -10,6 +10,8 @@ var cliOptions = require('yargs')
   .describe('resource', 'additional resources to be loaded into the code example iframes')
   .alias('name', 'n')
   .describe('name', 'name for the style guide or product')
+  .alias('syntax', 's')
+  .describe('syntax', 'add or override syntax filters to our main parser, this preforms a deepmerge')
   //.alias('c', 'config')
   //.alias('t', 'template')
   .alias('help', 'h')
@@ -23,7 +25,8 @@ var options = {
   input: cliOptions.input,
   output: cliOptions.output || undefined,
   resources: cliOptions.resource || [],
-  name: cliOptions.name || 'Styleguide'
+  name: cliOptions.name || 'Styleguide',
+  syntax: cliOptions.syntax || undefined
 }
 
 require('../index.js')(options);

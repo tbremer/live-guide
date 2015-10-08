@@ -35,6 +35,7 @@
     "babel-core": "^5.8.24",
     "chalk": "^1.1.1",
     "concat": "^1.0.0",
+    "deepmerge": "^0.2.10",
     "fs-extra": "^0.24.0",
     "glob": "^5.0.14",
     "handlebars": "^4.0.2",
