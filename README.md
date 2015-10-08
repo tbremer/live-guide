@@ -57,6 +57,7 @@ styleguide(options)
 
 **default:** *none*
 
+---
 
 ##### output
 **type:** `path`
@@ -67,6 +68,8 @@ styleguide(options)
 
 **default:** *./styleguide*
 
+---
+
 ##### resources
 **type:** `Array`
 
@@ -75,6 +78,8 @@ styleguide(options)
 **required:** false
 
 **default:** *none*
+
+---
 
 ##### name
 **type:** `String`
@@ -85,10 +90,10 @@ styleguide(options)
 
 **default:** *Styleguide*
 
-
+---
 
 ## Use in command line:
-```bash
+```shell
 $ npm install --global live-guide
 $ live-guide --input="path/to/**/*.css" --output=/var/www/styleguide --resource path/to/style.css another/path/here.js
 ```
