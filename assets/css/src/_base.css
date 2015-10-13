@@ -12,6 +12,11 @@
     color: var(--black);
 }
 
+::selection {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
 html,
 body {
     margin: 0;

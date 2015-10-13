@@ -19,6 +19,16 @@
   color: #131313;
 }
 
+::-moz-selection {
+  background-color: #3498db;
+  color: #efefef;
+}
+
+::selection {
+  background-color: #3498db;
+  color: #efefef;
+}
+
 html,
 body {
   margin: 0;
