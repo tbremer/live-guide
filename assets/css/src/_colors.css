@@ -2,10 +2,13 @@
     --primary: #efefef;
     --primary-dk: color(var(--primary) shade(22%));
     --primary-dkst: color(var(--primary) shade(45%));
+    --primary-lt: color(var(--primary) lightness(+ 22%));
 
     --accent: #3498db;
     --accent-dk: color(var(--accent) shade(22%));
     --accent-dkst: color(var(--accent) shade(45%));
+    --accent-lt: color(var(--accent) lightness(+ 22%));
 
     --black: #131313;
+    --black-alpha: rgba(19, 19, 19, .24);
 }

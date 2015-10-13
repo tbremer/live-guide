@@ -177,7 +177,7 @@ You can add blank lines in examples with `
 **Description:** Add a link to the styleguide, automatically opens in a new tab
 
 
-#### @writeName
+#### @writename
 **Description:** If you want the file name to be different than the title, for instance setting up an index page.
 *There is no need to provide a file extension*
 ## Todo

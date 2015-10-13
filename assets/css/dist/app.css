@@ -9,6 +9,7 @@
  * @title Core
  * @description These features are throughout the source code and can be plugged in on any element.
  * @writeName index
+ * ## Element Based Styles
 */
 
 *,
@@ -18,28 +19,10 @@
   color: #131313;
 }
 
-/**
- *
- * ### MICRO CLEARFIX
- * @author [nicolas gallagher](http://nicolasgallagher.com)
- * @url http://nicolasgallagher.com/micro-clearfix-hack/
- *
- * Apply a class of `cf` to any element that has floated elements inside of it.
- * @example html
- * <section class="cf">
- *  <section style="float: left; width: 25%;">I am floating left</section>
- *  <section style="float: left; width: 74%;">I am also floating left so the parent section will not have any height.<section>
- * </section>
- */
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -73,6 +56,28 @@ a:hover {
 
 /**
  *
+ * ### Horizontal Rule
+ * @description `<hr />` do not need a special class, by default they will take up 90% of their containing element and be centered
+ * @example html
+ * <h3>I am a medium sized heading</h3>
+ * <p> This is content, lorem ipsum and such...</p>
+ * <hr />
+ * <h3>Next section...</h3>
+ */
+
+hr {
+  width: 90%;
+  margin: 1rem auto;
+  border: 0;
+  border-bottom: 1px solid rgb(147, 200, 236);
+}
+
+h1 + hr {
+  width: 100%;
+}
+
+/**
+ *
  * ### Buttons
  * @todo research implication of removing outline for accessability.
  */
@@ -96,6 +101,100 @@ button:hover {
 
 button:active {
   border: 1px solid rgb(41, 119, 171);
+}
+
+/**
+ * ### Tables
+ * @description Tables are used to display organized data structures, they are not to be used for layouts or multiform data.
+ * @example html
+ * <table>
+ *   <thead>
+ *       <tr>
+ *           <th>CLASS NAME</th>
+ *           <th>BREAKPOINT</th>
+ *       </tr>
+ *   </thead>
+ *   <tbody>
+ *       <tr>
+ *           <td>.col-sm-*</td>
+ *           <td>≤640px</td>
+ *       </tr>
+ *       <tr>
+ *           <td>.col-md-*md</td>
+ *           <td>≥641px</td>
+ *       </tr>
+ *       <tr>
+ *           <td>.col-lrg-*lrg</td>
+ *           <td>≥1025px</td>
+ *       </tr>
+ *       <tr>
+ *           <td>.col-xl-*xl</td>
+ *           <td>≥1441px</td>
+ *       </tr>
+ *       <tr>
+ *           <td>.col-xxl-*xxl</td>
+ *           <td>≥1921px</td>
+ *       </tr>
+ *   </tbody>
+ * </table>
+ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(19, 19, 19, .24);
+}
+
+thead {
+  border: 0;
+  border-bottom: 1px solid rgb(186, 186, 186);
+  -webkit-font-feature-settings: "c2sc";
+  -moz-font-feature-settings: "c2sc";
+  font-feature-settings: "c2sc";
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+th,
+td {
+  padding: .5rem;
+}
+
+tbody tr:hover {
+  background-color: rgb(147, 200, 236);
+}
+
+/*
+ * ---
+ * ## Class Based Styles
+ *
+ */
+
+/**
+ *
+ * ### MICRO CLEARFIX
+ * @author [nicolas gallagher](http://nicolasgallagher.com)
+ * @url http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * Apply a class of `cf` to any element that has floated elements inside of it.
+ * @example html
+ * <section class="cf">
+ *  <section style="float: left; width: 25%;">I am floating left</section>
+ *  <section style="float: left; width: 74%;">I am also floating left so the parent section will not have any height.<section>
+ * </section>
+ */
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
 }
 
 /**
@@ -193,7 +292,6 @@ article > h1 {
 .code-block code {
   margin-top: 15px;
   padding: .5rem;
-  background-color: rgb(100, 100, 100);
 }
 
 code {

@@ -25,7 +25,6 @@
 .code-block code {
     margin-top: 15px;
     padding: .5rem;
-    background-color: color(var(--black) whiteness(60%));
 }
 
 code {
