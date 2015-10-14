@@ -251,6 +251,11 @@ header h1 {
   color: #efefef;
 }
 
+header h1 a,
+header h1 a:hover {
+  color: #efefef;
+}
+
 nav {
   position: fixed;
   top: 0;

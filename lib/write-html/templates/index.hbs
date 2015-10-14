@@ -8,11 +8,21 @@
 </head>
 <body class="styleguide">
     <header>
-        <h1>{{options.name}}</h1>
+        {{#contains 'index.html' options.navigation}}
+            <h1><a href="index.html">{{options.name}}</a></h1>
+        {{else}}
+            <h1>{{options.name}}</h1>
+        {{/contains}}
     </header>
     <nav class="navigation">
+        {{#contains 'index.html' options.navigation}}
+            <div><a href="index.html">Home</a></div>
+        {{/contains}}
         {{#each options.navigation}}
+            {{#contains 'index.html' this}}
+            {{else}}
             <div><a href="{{this}}">{{@key}}</a></div>
+            {{/contains}}
         {{/each}}
     </nav>
 
