@@ -1,6 +1,7 @@
 @import '_fontstack.css';
-@import '_colors.css';
+@import '_color-variables.css';
 @import '_base.css';
+@import '_color-palette.css';
 @import '_layout.css';
 @import '_code.css';
 @import '_icon.css';

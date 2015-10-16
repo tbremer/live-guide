@@ -1,0 +1,29 @@
+.color-palette {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1rem;
+    width: 150px;
+    padding: .5rem;
+}
+
+.color-palette__dot {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, .24);
+}
+
+.color-palette__name {
+    margin: .15rem 0;
+    font-size: .85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-variant: small-caps;
+}
+
+.color-palette__description {
+    font-size: .85rem;
+    font-style: italic;
+}

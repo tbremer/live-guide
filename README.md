@@ -134,6 +134,13 @@ Options:
 // @author Jon Doe
 ```
 
+#### @color
+**Description:** Create a color dot with name & description
+**Example:**
+```
+@color #131313 [Black] - Black is used for body copy
+```
+
 #### @description
 **Description:** Set a description for this section of the styleguide, generally used after an `@title`
 **Example:**
